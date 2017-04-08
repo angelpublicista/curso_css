@@ -1,0 +1,21 @@
+header {
+	background-color: #5b7989;
+	color: #fff;
+	font-family: 'Dancing Script', cursive;
+	border-radius: 10px 10px 0px 0px;
+}
+
+#contenedor {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#menu-principal ul li {
+	display: inline;
+	
+}
+
+@media (min-width: 900px) {
+	
+}

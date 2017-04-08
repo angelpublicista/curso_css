@@ -1,21 +1,225 @@
-header {
-	background-color: #5b7989;
-	color: #fff;
+* {
 	font-family: 'Dancing Script', cursive;
-	border-radius: 10px 10px 0px 0px;
+	margin:0;
+}
+img {
+	width: 100%;
+	box-shadow: 1px 2px 2px #02010a
 }
 
-#contenedor {
-	width: 100%;
+body {
+	background-color: #000;
+}
+
+
+	.imagen-secundaria {
+		background-color: #d5c75f;
+	}
+
+	.imagen-secundaria img {
+		transition: all 1s;
+	}
+	
+	#paisajes img:hover{
+		transform: rotate(10deg);
+	}
+
+	#retratos img:hover{
+		transform: translate(20px, -5px);
+	}
+
+	.caja-imagen {
+		margin: 3%;
+	}
+
+	footer {
+		text-align: justify;
+	}
+
+	#redes img {
+		width: 20px;
+		box-shadow: none;
+	}
+
+	#redes a:hover {
+	color: #000;
+	}
+
+	.galeria {
+		background-color: #d5c75f;
+	}
+
+	.caja-galeria {
+		margin: 3%;
+	}
+
+	.img1 {
+		-webkit-filter: blur(10px);
+		filter: blur(10px);
+	}
+
+	.img2, .img4, .img6 {
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+
+	.img3 {
+		-webkit-filter: sepia(90%);
+		filter: sepia(90%);
+	}
+
+header {
+	color: #fff;
+	background-color: #5b7989;
+	width: 96%;
 	display: flex;
 	flex-flow: row wrap;
+	border-radius: 10px 10px 0px 0px;
+	padding: 2%;
+	animation: slidein 1s;
+
 }
 
-#menu-principal ul li {
+@-webkit-keyframes slidein {
+	0%{
+		margin-top: 150%;
+	}
+
+	60%{
+		margin-top: -5%;
+	}
+
+	100%{
+		margin-top: 0%;
+	}
+}
+
+header h1{
+	flex-grow: 5;
+	text-shadow: 2px 2px 2px #02010a;
+	text-align: center;
+}
+
+nav {
+	flex-grow: 5;
+	margin-top: 10px;
+	text-align: center;
+}
+
+nav ul li{
 	display: inline;
+	padding: 0 10px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+.imagen-central {
+	background-color: #82c3a6;
+	padding: 3%;
 	
 }
 
-@media (min-width: 900px) {
+footer {
+	background-color: #C6d5c5;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.columna {
+	padding: 3%;
+}
+
+#redes ul{
+	list-style: none;
+}
+
+#redes li{
+	list-style: none;
+	padding: 4%;
+}
+
+#redes p{
+	padding: 3% 0;
+}
+
+#redes a{
+	text-decoration: none;
+}
+
+@media (min-width: 720px) {
+	.contenido {
+	max-width: 900px;
+	margin: auto;
+
+	}
+
+	.imagen-secundaria {
+	display: flex;
+	flex-direction: row;
+
+}
+
+	.imagen-secundaria img{
+		height: 100%;
+	}
+
+	.caja-imagen {
+		width: 50%;
+		height: 300px;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+	}
+
+	footer .columna {
+		width: 33.3%;
+	}
+
+	.col {
+		display: flex;
+		flex-direction: row;
+	}
 	
+	.caja-galeria {
+		width: 33.3%;
+		margin: 2%;
+	}
+
+	
+}
+
+
+@media (max-width: 420px) {
+
+	header {
+		display: flex;
+		flex-flow: column;
+	}
+
+	main {
+		height: 100%;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.imagen-secundaria {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.galeria {
+		display: flex;
+		flex-direction: column;
+	}
 }
